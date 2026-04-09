@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interdisciplinary Group Assignments Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        professional: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                        },
+                        accent: {
+                            teal: '#2cb1bc',
+                            orange: '#ff9b50',
+                            green: '#27ae60',
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #f8fafc, #f1f5f9);
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .session-tab.active {
+            background-color: #334e68;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(51, 78, 104, 0.39);
+        }
+        .degree-badge {
+            font-size: 0.65rem;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .gsb-badge { background: #fee2e2; color: #991b1b; }
+        .sls-badge { background: #dcfce7; color: #166534; }
+        .mip-badge { background: #fef9c3; color: #854d0e; }
+        .cee-badge { background: #e0f2fe; color: #075985; }
+        .som-badge { background: #f3e8ff; color: #6b21a8; }
+        
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-body text-professional-800 antialiased pb-12">
+
+    <!-- Header Section -->
+    <header class="pt-12 pb-8 px-6 text-center max-w-6xl mx-auto">
+        <h1 class="font-display text-4xl md:text-5xl font-bold text-professional-900 tracking-tight mb-3">
+            Interdisciplinary Group Assignments
+        </h1>
+        <p class="text-professional-500 text-lg md:text-xl font-light max-w-2xl mx-auto">
+            Collaboration schedule for GSB & Cross-Campus Graduate Students
+        </p>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 md:px-6">
+        
+        <!-- Summary Stats Bento Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="glass-card p-6 rounded-2xl shadow-glass flex flex-col items-center justify-center text-center">
+                <span class="text-3xl font-bold text-professional-800 mb-1">39</span>
+                <span class="text-xs uppercase tracking-widest text-professional-500 font-semibold">MBA Students</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-glass flex flex-col items-center justify-center text-center">
+                <span class="text-3xl font-bold text-professional-800 mb-1">13</span>
+                <span class="text-xs uppercase tracking-widest text-professional-500 font-semibold">Non-MBA Students</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-glass flex flex-col items-center justify-center text-center">
+                <span class="text-3xl font-bold text-professional-800 mb-1">7</span>
+                <span class="text-xs uppercase tracking-widest text-professional-500 font-semibold">Class Sessions</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-glass flex flex-col items-center justify-center text-center bg-professional-800 !bg-opacity-100">
+                <span class="text-3xl font-bold text-white mb-1">52</span>
+                <span class="text-xs uppercase tracking-widest text-professional-200 font-semibold">Total Scholars</span>
+            </div>
+        </div>
+
+        <!-- Introductory Info Card -->
+        <div class="glass-card rounded-3xl p-8 mb-12 border-l-4 border-accent-teal shadow-glass">
+            <h2 class="font-display text-2xl font-bold text-professional-900 mb-4">Curriculum Overview</h2>
+            <p class="text-professional-600 leading-relaxed mb-4">
+                This schedule facilitates interdisciplinary collaboration between students from the <span class="font-semibold text-professional-800">Stanford Graduate School of Business (GSB)</span> and partners from <span class="font-semibold text-professional-800">SLS, MIP, CEE, and SOM</span>. To maximize the educational experience, groups are rotated each session to minimize repeat pairings and foster a diverse network of perspectives.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+                <span class="text-xs px-3 py-1 bg-professional-100 text-professional-600 rounded-full font-medium">Balanced Distribution</span>
+                <span class="text-xs px-3 py-1 bg-professional-100 text-professional-600 rounded-full font-medium">Rotating Roster</span>
+                <span class="text-xs px-3 py-1 bg-professional-100 text-professional-600 rounded-full font-medium">Interdisciplinary Pairs</span>
+            </div>
+        </div>
+
+        <!-- Session Tabs -->
+        <div class="flex overflow-x-auto pb-4 gap-2 no-scrollbar mb-8 -mx-4 px-4 md:mx-0 md:px-0">
+            <button onclick="switchSession(1)" id="btn-1" class="session-tab active whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 3</button>
+            <button onclick="switchSession(2)" id="btn-2" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 4</button>
+            <button onclick="switchSession(3)" id="btn-3" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 5</button>
+            <button onclick="switchSession(4)" id="btn-4" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 6</button>
+            <button onclick="switchSession(5)" id="btn-5" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 7</button>
+            <button onclick="switchSession(6)" id="btn-6" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 8</button>
+            <button onclick="switchSession(7)" id="btn-7" class="session-tab whitespace-nowrap px-6 py-3 rounded-xl font-semibold transition-all duration-300 glass-card">Session 10</button>
+        </div>
+
+        <!-- Group Display Area -->
+        <div id="session-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Content dynamically injected here -->
+        </div>
+
+    </main>
+
+    <script>
+        const sessionData = {
+            1: [
+                { id: "Group 1", members: ["Keitaro (GSB)", "Stefan (GSB)", "Michael C (GSB)", "Oren (GSB)", "Lauren (SLS)", "Alex (SLS)"] },
+                { id: "Group 2", members: ["Kenny (GSB)", "Yotam (GSB)", "Kate (GSB)", "Thomas (GSB)", "Meera (CEE)", "Sara (MIP)"] },
+                { id: "Group 3", members: ["Cora (GSB)", "Tyler (GSB)", "Tomás (GSB)", "Jessica (GSB)", "Charulata (MIP)"] },
+                { id: "Group 4", members: ["George (GSB)", "Elis (GSB)", "Dre (GSB)", "Mathilde (GSB)", "Malcolm (SLS)"] },
+                { id: "Group 5", members: ["Sam R (GSB)", "Kat (GSB)", "Quang (GSB)", "Matthew (GSB)", "Tennyson (MIP)"] },
+                { id: "Group 6", members: ["Piyush (GSB)", "Renato (GSB)", "Chieh (GSB)", "Kieran (GSB)", "Malvika (SOM)"] },
+                { id: "Group 7", members: ["Michael Y (GSB)", "Esther (GSB)", "Mason (GSB)", "Vivian (GSB)", "Sierra (SLS)"] },
+                { id: "Group 8", members: ["Federico (GSB)", "Kyle (GSB)", "Michelle (GSB)", "Kristen (GSB)", "Mariko (MIP)"] },
+                { id: "Group 9", members: ["Rohan (GSB)", "Isaac (GSB)", "Adi (GSB)", "Rahim (GSB)", "Cosima (MIP)"] },
+                { id: "Group 10", members: ["John (GSB)", "Gauraang (GSB)", "David (GSB)", "Arianna (SLS)", "Cameron (SLS)"] }
+            ],
+            2: [
+                { id: "Group 1", members: ["John (GSB)", "Quang (GSB)", "George (GSB)", "Kyle (GSB)", "Arianna (SLS)", "Meera (CEE)"] },
+                { id: "Group 2", members: ["Thomas (GSB)", "Piyush (GSB)", "Isaac (GSB)", "Mason (GSB)", "Mariko (MIP)", "Sara (MIP)"] },
+                { id: "Group 3", members: ["Renato (GSB)", "Michael C (GSB)", "Cora (GSB)", "Adi (GSB)", "Tennyson (MIP)"] },
+                { id: "Group 4", members: ["Federico (GSB)", "David (GSB)", "Oren (GSB)", "Sam R (GSB)", "Sierra (SLS)"] },
+                { id: "Group 5", members: ["Kieran (GSB)", "Dre (GSB)", "Yotam (GSB)", "Jessica (GSB)", "Alex (SLS)"] },
+                { id: "Group 6", members: ["Kat (GSB)", "Michael Y (GSB)", "Rahim (GSB)", "Kristen (GSB)", "Malcolm (SLS)"] },
+                { id: "Group 7", members: ["Keitaro (GSB)", "Rohan (GSB)", "Gauraang (GSB)", "Tyler (GSB)", "Malvika (SOM)"] },
+                { id: "Group 8", members: ["Tomás (GSB)", "Esther (GSB)", "Kate (GSB)", "Mathilde (GSB)", "Lauren (SLS)"] },
+                { id: "Group 9", members: ["Vivian (GSB)", "Elis (GSB)", "Chieh (GSB)", "Stefan (GSB)", "Cosima (MIP)"] },
+                { id: "Group 10", members: ["Kenny (GSB)", "Michelle (GSB)", "Matthew (GSB)", "Charulata (MIP)", "Cameron (SLS)"] }
+            ],
+            3: [
+                { id: "Group 1", members: ["Kieran (GSB)", "Stefan (GSB)", "Kat (GSB)", "Mason (GSB)", "Sara (MIP)", "Arianna (SLS)"] },
+                { id: "Group 2", members: ["Oren (GSB)", "Tomás (GSB)", "Chieh (GSB)", "Dre (GSB)", "Cosima (MIP)", "Mariko (MIP)"] },
+                { id: "Group 3", members: ["Tyler (GSB)", "Rahim (GSB)", "Adi (GSB)", "Gauraang (GSB)", "Meera (CEE)"] },
+                { id: "Group 4", members: ["Mathilde (GSB)", "Renato (GSB)", "Esther (GSB)", "Cora (GSB)", "Cameron (SLS)"] },
+                { id: "Group 5", members: ["Michael C (GSB)", "George (GSB)", "Piyush (GSB)", "Kate (GSB)", "Sierra (SLS)"] },
+                { id: "Group 6", members: ["Matthew (GSB)", "Keitaro (GSB)", "Kyle (GSB)", "Isaac (GSB)", "Lauren (SLS)"] },
+                { id: "Group 7", members: ["Rohan (GSB)", "Yotam (GSB)", "Federico (GSB)", "Vivian (GSB)", "Malcolm (SLS)"] },
+                { id: "Group 8", members: ["Thomas (GSB)", "Kristen (GSB)", "Elis (GSB)", "Michael Y (GSB)", "Charulata (MIP)"] },
+                { id: "Group 9", members: ["Quang (GSB)", "Kenny (GSB)", "David (GSB)", "Jessica (GSB)", "Tennyson (MIP)"] },
+                { id: "Group 10", members: ["Michelle (GSB)", "John (GSB)", "Sam R (GSB)", "Alex (SLS)", "Malvika (SOM)"] }
+            ],
+            4: [
+                { id: "Group 1", members: ["Kyle (GSB)", "Sam R (GSB)", "Piyush (GSB)", "Kristen (GSB)", "Cameron (SLS)", "Tennyson (MIP)"] },
+                { id: "Group 2", members: ["Kate (GSB)", "Adi (GSB)", "Isaac (GSB)", "George (GSB)", "Mariko (MIP)", "Charulata (MIP)"] },
+                { id: "Group 3", members: ["Quang (GSB)", "Yotam (GSB)", "Michael Y (GSB)", "John (GSB)", "Arianna (SLS)"] },
+                { id: "Group 4", members: ["Matthew (GSB)", "Federico (GSB)", "Mathilde (GSB)", "Esther (GSB)", "Malvika (SOM)"] },
+                { id: "Group 5", members: ["Kat (GSB)", "Jessica (GSB)", "Thomas (GSB)", "Oren (GSB)", "Cosima (MIP)"] },
+                { id: "Group 6", members: ["Michelle (GSB)", "Kieran (GSB)", "Vivian (GSB)", "Rahim (GSB)", "Sierra (SLS)"] },
+                { id: "Group 7", members: ["Chieh (GSB)", "Elis (GSB)", "Gauraang (GSB)", "Cora (GSB)", "Lauren (SLS)"] },
+                { id: "Group 8", members: ["Stefan (GSB)", "Renato (GSB)", "David (GSB)", "Keitaro (GSB)", "Meera (CEE)"] },
+                { id: "Group 9", members: ["Tyler (GSB)", "Dre (GSB)", "Rohan (GSB)", "Michael C (GSB)", "Sara (MIP)"] },
+                { id: "Group 10", members: ["Mason (GSB)", "Kenny (GSB)", "Tomás (GSB)", "Malcolm (SLS)", "Alex (SLS)"] }
+            ],
+            5: [
+                { id: "Group 1", members: ["Kyle (GSB)", "Kat (GSB)", "Elis (GSB)", "Kenny (GSB)", "Malvika (SOM)", "Sierra (SLS)"] },
+                { id: "Group 2", members: ["Rohan (GSB)", "Mason (GSB)", "Cora (GSB)", "Jessica (GSB)", "Lauren (SLS)", "Alex (SLS)"] },
+                { id: "Group 3", members: ["Esther (GSB)", "Dre (GSB)", "John (GSB)", "Vivian (GSB)", "Charulata (MIP)"] },
+                { id: "Group 4", members: ["Michelle (GSB)", "Tyler (GSB)", "Sam R (GSB)", "George (GSB)", "Sara (MIP)"] },
+                { id: "Group 5", members: ["Kieran (GSB)", "Gauraang (GSB)", "Tomás (GSB)", "Chieh (GSB)", "Tennyson (MIP)"] },
+                { id: "Group 6", members: ["Isaac (GSB)", "Quang (GSB)", "Stefan (GSB)", "Renato (GSB)", "Malcolm (SLS)"] },
+                { id: "Group 7", members: ["Matthew (GSB)", "David (GSB)", "Kristen (GSB)", "Oren (GSB)", "Meera (CEE)"] },
+                { id: "Group 8", members: ["Yotam (GSB)", "Piyush (GSB)", "Thomas (GSB)", "Federico (GSB)", "Cameron (SLS)"] },
+                { id: "Group 9", members: ["Michael C (GSB)", "Keitaro (GSB)", "Mathilde (GSB)", "Michael Y (GSB)", "Mariko (MIP)"] },
+                { id: "Group 10", members: ["Adi (GSB)", "Rahim (GSB)", "Kate (GSB)", "Cosima (MIP)", "Arianna (SLS)"] }
+            ],
+            6: [
+                { id: "Group 1", members: ["Michael C (GSB)", "Oren (GSB)", "Isaac (GSB)", "Kat (GSB)", "Alex (SLS)", "Malcolm (SLS)"] },
+                { id: "Group 2", members: ["Tyler (GSB)", "Piyush (GSB)", "Kieran (GSB)", "Michelle (GSB)", "Arianna (SLS)", "Charulata (MIP)"] },
+                { id: "Group 3", members: ["Keitaro (GSB)", "Mathilde (GSB)", "Vivian (GSB)", "Kyle (GSB)", "Sara (MIP)"] },
+                { id: "Group 4", members: ["Rohan (GSB)", "Michael Y (GSB)", "Kenny (GSB)", "Kristen (GSB)", "Malvika (SOM)"] },
+                { id: "Group 5", members: ["Mason (GSB)", "Renato (GSB)", "Matthew (GSB)", "Yotam (GSB)", "Cosima (MIP)"] },
+                { id: "Group 6", members: ["Tomás (GSB)", "Cora (GSB)", "Sam R (GSB)", "Adi (GSB)", "Cameron (SLS)"] },
+                { id: "Group 7", members: ["Elis (GSB)", "Jessica (GSB)", "Kate (GSB)", "Gauraang (GSB)", "Meera (CEE)"] },
+                { id: "Group 8", members: ["Rahim (GSB)", "Quang (GSB)", "George (GSB)", "Chieh (GSB)", "Lauren (SLS)"] },
+                { id: "Group 9", members: ["Esther (GSB)", "David (GSB)", "Thomas (GSB)", "Dre (GSB)", "Sierra (SLS)"] },
+                { id: "Group 10", members: ["Federico (GSB)", "Stefan (GSB)", "John (GSB)", "Tennyson (MIP)", "Mariko (MIP)"] }
+            ],
+            7: [
+                { id: "Group 1", members: ["Mathilde (GSB)", "Adi (GSB)", "John (GSB)", "Oren (GSB)", "Mariko (MIP)", "Sara (MIP)"] },
+                { id: "Group 2", members: ["Quang (GSB)", "Kristen (GSB)", "George (GSB)", "Keitaro (GSB)", "Cameron (SLS)", "Sierra (SLS)"] },
+                { id: "Group 3", members: ["Kate (GSB)", "Tyler (GSB)", "Chieh (GSB)", "Kieran (GSB)", "Malvika (SOM)"] },
+                { id: "Group 4", members: ["Thomas (GSB)", "Michael C (GSB)", "Kyle (GSB)", "Rahim (GSB)", "Malcolm (SLS)"] },
+                { id: "Group 5", members: ["Michelle (GSB)", "Cora (GSB)", "Stefan (GSB)", "Dre (GSB)", "Lauren (SLS)"] },
+                { id: "Group 6", members: ["David (GSB)", "Yotam (GSB)", "Kenny (GSB)", "Rohan (GSB)", "Cosima (MIP)"] },
+                { id: "Group 7", members: ["Jessica (GSB)", "Tomás (GSB)", "Piyush (GSB)", "Vivian (GSB)", "Meera (CEE)"] },
+                { id: "Group 8", members: ["Michael Y (GSB)", "Kat (GSB)", "Renato (GSB)", "Sam R (GSB)", "Charulata (MIP)"] },
+                { id: "Group 9", members: ["Matthew (GSB)", "Gauraang (GSB)", "Esther (GSB)", "Mason (GSB)", "Arianna (SLS)"] },
+                { id: "Group 10", members: ["Elis (GSB)", "Federico (GSB)", "Isaac (GSB)", "Tennyson (MIP)", "Alex (SLS)"] }
+            ]
+        };
+
+        function getBadgeClass(name) {
+            if (name.includes('(GSB)')) return 'gsb-badge';
+            if (name.includes('(SLS)')) return 'sls-badge';
+            if (name.includes('(MIP)')) return 'mip-badge';
+            if (name.includes('(CEE)')) return 'cee-badge';
+            if (name.includes('(SOM)')) return 'som-badge';
+            return 'bg-gray-100';
+        }
+
+        function formatName(name) {
+            return name.split(' (')[0];
+        }
+
+        function getDegreeLabel(name) {
+            return name.match(/\(([^)]+)\)/)[1];
+        }
+
+        function switchSession(num) {
+            // Update UI tabs
+            document.querySelectorAll('.session-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(`btn-${num}`).classList.add('active');
+
+            const container = document.getElementById('session-container');
+            container.innerHTML = ''; // Clear current
+
+            sessionData[num].forEach((group, index) => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl p-6 shadow-glass hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 fade-in';
+                card.style.animationDelay = `${index * 0.05}s`;
+
+                let membersHtml = group.members.map(member => `
+                    <li class="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                        <span class="text-professional-700 font-medium">${formatName(member)}</span>
+                        <span class="degree-badge ${getBadgeClass(member)}">${getDegreeLabel(member)}</span>
+                    </li>
+                `).join('');
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-display font-bold text-xl text-professional-800">${group.id}</h4>
+                        <span class="text-xs font-semibold text-professional-400 bg-professional-50 px-2 py-1 rounded">${group.members.length} Members</span>
+                    </div>
+                    <ul class="space-y-0.5">
+                        ${membersHtml}
+                    </ul>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Initialize with Session 1
+        window.onload = () => switchSession(1);
+    </script>
+</body>
+</html>
